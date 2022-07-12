@@ -1,6 +1,7 @@
 ﻿using AraratBank.Models;
 using AraratBank.Models.DataBase;
 using AraratBank.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,7 @@ namespace AraratBank.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class APIsController : ControllerBase
     {
         private readonly AppDBContext _context;
